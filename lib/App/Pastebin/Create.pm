@@ -5,7 +5,9 @@ package App::Pastebin::Create;
 # FILE HOLDER/THIS IS COMMAND LINE APP, executable name is pastebin-create
 # The executable located in bin/
 # type pastebin -h for usage
-$VERSION = '1.0009';
+our $VERSION = '1.0010'; # VERSION
+
+__END__
 
 =pod
 
@@ -13,35 +15,35 @@ $VERSION = '1.0009';
 
 =head1 NAME
 
-App::Pastebin::Create - CLI to create Pastebin.com paste and uploading.
-
-Adapted from WWW::Pastebin::PastebinCom::Create module.
-
+App::Pastebin::Create - Simple CLI App to create and upload to Pastebin.com
 
 =head1 VERSION
 
-version 1.0009
+version 1.0010
 
-=head1 EXAMPLE USAGE
-	
+=head1 SYNOPSIS
+
 	pastebin-create --text 'TEXT' --format 'none' --expiry 10m --private 0 --desc 'A TITLE'
 
-=head1 OPTIONS
+=head1 Flags
 
 =head2 --text, -t
+
 REQUIRED
 
 This flag required to run the program (at minimum).
 
-Functioning as your paste text flag (STDIN from file, will be implemented).
+Text to paste flag. 
 
 =head2 --format, -f
+
 OPTIONAL
 
-Syntax highlighting choice, see here for list - L<https://metacpan.org/pod/WWW::Pastebin::PastebinCom::Create>
+Syntax highlighting choice, see here for list - L<WWW::Pastebin::PastebinCom::Create>
 
 =head2 --expiry, -e
-OPTIONAL\
+
+OPTIONAL
 
 DEFAULT TO: 30 days/1 month
 
@@ -50,24 +52,34 @@ Your paste time to expired.
 Example: Never, 10m (10 minutes) 
 
 =head2 --private, -p
+
 OPTIONAL
 
 Defaults to 1: make your pastes unlisted
 
 =head2 --desc, -d
+
 OPTIONAL
 
 Your paste title description.
 
 =head1 SEE ALSO
 
-L<https://metacpan.org/pod/WWW::Pastebin::PastebinCom::Create>, L<https://metacpan.org/pod/App::Nopaste>
+=over 4
 
+=item *
+
+L<WWW::Pastebin::PastebinCom::Create>
+
+=item *
+
+L<App::Nopaste>
+
+=back
 
 =head1 AUTHOR
 
-mfzz, <mfzz@cpan.org>
-
+mfzz <mfzz@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
@@ -77,5 +89,3 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
-1;

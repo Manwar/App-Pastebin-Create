@@ -15,5 +15,5 @@ name: App-Pastebin-Create
 requires:
   Getopt::Long: v2.49.1
   WWW::Pastebin::PastebinCom::Create: '1.003'
-version: '1.0009'
+version: '1.0010'
 x_serialization_backend: 'YAML::Tiny version 1.69'

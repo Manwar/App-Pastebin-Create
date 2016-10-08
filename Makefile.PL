@@ -22,9 +22,9 @@ my %WriteMakefileArgs = (
     "Getopt::Long" => "2.49.1",
     "WWW::Pastebin::PastebinCom::Create" => "1.003"
   },
-  "VERSION" => "1.0009",
+  "VERSION" => "1.0010",
   "test" => {
-    "TESTS" => ""
+    "TESTS" => "t/*.t"
   }
 );
 

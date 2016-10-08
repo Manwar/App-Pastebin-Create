@@ -1,0 +1,30 @@
+#!perl
+
+use strict;
+use warnings;
+use WWW::Pastebin::PastebinCom::Create;
+use Getopt::Long qw(GetOptions);
+
+my ($text_input, $format_input, $expiry_input, $privacy_input, $desc_input);
+
+GetOptions(
+	'text=s' => \$text_input,
+	'format=s' => \$format_input,
+	'expiry=s' => \$expiry_input,
+	'private=s' => \$privacy_input,
+	'desc=s' => \$desc_input) or die "Usage: $0 --text 'TEXT' --format 'none' --expiry 10m --private 0 --desc 'DESCRIPTION'";
+
+
+
+my $bin = WWW::Pastebin::PastebinCom::Create->new;
+
+my $uri = $bin->paste(
+	text => $text_input,
+	format => $format_input,
+	expiry => $expiry_input,
+	private => $privacy_input,
+	desc => $desc_input
+) or die "You need at least to declare --text flag. Debug-message-> " . $bin->error;
+
+print "Your paste URL: $bin\n";
+

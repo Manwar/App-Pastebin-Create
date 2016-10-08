@@ -1,0 +1,53 @@
+NAME
+    App::Pastebin::Create - CLI to create Pastebin.com paste and uploading.
+
+    Adapted from WWW::Pastebin::PastebinCom::Create module.
+
+VERSION
+    version 1.0009
+
+EXAMPLE USAGE
+            pastebin-create --text 'TEXT' --format 'none' --expiry 10m --private 0 --desc 'A TITLE'
+
+OPTIONS
+  --text, -t
+REQUIRED
+    This flag required to run the program (at minimum).
+
+    Functioning as your paste text flag (STDIN from file, will be
+    implemented).
+
+  --format, -f
+OPTIONAL
+    Syntax highlighting choice, see here for list -
+    <https://metacpan.org/pod/WWW::Pastebin::PastebinCom::Create>
+
+  --expiry, -e
+OPTIONAL\
+    DEFAULT TO: 30 days/1 month
+
+    Your paste time to expired.
+
+    Example: Never, 10m (10 minutes)
+
+  --private, -p
+OPTIONAL
+    Defaults to 1: make your pastes unlisted
+
+  --desc, -d
+OPTIONAL
+    Your paste title description.
+
+SEE ALSO
+    <https://metacpan.org/pod/WWW::Pastebin::PastebinCom::Create>,
+    <https://metacpan.org/pod/App::Nopaste>
+
+AUTHOR
+    mfzz, <mfzz@cpan.org>
+
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2016 by mfzz.
+
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
+

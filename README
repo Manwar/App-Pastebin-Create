@@ -8,6 +8,11 @@ VERSION
 
     version 1.0009
 
+INSTALLATION
+	CPAN - cpan App::Pastebin::Create
+
+	Manual - perl Makefile.PL && make && make install
+
 EXAMPLE USAGE
 
             pastebin-create --text 'TEXT' --format 'none' --expiry 10m --private 0 --desc 'A TITLE'

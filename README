@@ -1,0 +1,69 @@
+NAME
+
+    App::Pastebin::Create - Simple CLI App to create and upload to
+    Pastebin.com
+
+VERSION
+
+    version 1.0019
+
+SYNOPSIS
+
+            pastebin-create --text 'TEXT' --format 'none' --expiry 10m --private 0 --desc 'A TITLE'
+
+Flags
+
+ --text, -t
+
+    REQUIRED
+
+    This flag required to run the program (at minimum).
+
+    Text to paste flag.
+
+ --format, -f
+
+    OPTIONAL
+
+    Syntax highlighting choice, see here for list -
+    WWW::Pastebin::PastebinCom::Create
+
+ --expiry, -e
+
+    OPTIONAL
+
+    DEFAULT TO: 30 days/1 month
+
+    Your paste time to expired.
+
+    Example: Never, 10m (10 minutes)
+
+ --private, -p
+
+    OPTIONAL
+
+    Defaults to 1: make your pastes unlisted
+
+ --desc, -d
+
+    OPTIONAL
+
+    Your paste title description.
+
+SEE ALSO
+
+      * WWW::Pastebin::PastebinCom::Create
+
+      * App::Nopaste
+
+AUTHOR
+
+    mfzz <mfzz@cpan.org>
+
+COPYRIGHT AND LICENSE
+
+    This software is copyright (c) 2016 by mfzz.
+
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
+
